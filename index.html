@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blackreef — Industrial Intelligence for Reliability</title>
+    <meta
+      name="description"
+      content="Blackreef builds industrial intelligence for reliability-critical systems. AxiomIQ detects drift early, quantifies risk, and produces deterministic, contract-validated reports."
+    />
+    <meta name="theme-color" content="#0b0f14" />
+
+    <meta property="og:title" content="Blackreef — Industrial Intelligence for Reliability" />
+    <meta
+      property="og:description"
+      content="AxiomIQ detects drift early, quantifies risk, and produces deterministic, contract-validated reports for reliability-critical fleets."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blackreef.io/" />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Blackreef home">
+          <span class="mark" aria-hidden="true">⬣</span>
+          <span class="brand-name">BLACKREEF</span>
+        </a>
+
+        <nav class="nav">
+          <a href="#product">AxiomIQ</a>
+          <a href="#principles">Principles</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Industrial Intelligence • Reliability Engineering • Early Signal</p>
+            <h1>Detect drift early. Quantify risk. Ship decisions you can defend.</h1>
+            <p class="lead">
+              Blackreef builds reliability-first analytics for mission-critical industrial systems.
+              Our flagship engine, <strong>AxiomIQ</strong>, turns raw operating data into deterministic,
+              contract-validated reports—designed for real operations, not demos.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="#contact">Request access</a>
+              <a class="btn ghost" href="#product">See what AxiomIQ does</a>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric">
+                <div class="metric-top">Deterministic outputs</div>
+                <div class="metric-bottom">Reproducible analytics; no mystery drift.</div>
+              </div>
+              <div class="metric">
+                <div class="metric-top">Strict contracts</div>
+                <div class="metric-bottom">Schema-validated JSON; CI-enforced integrity.</div>
+              </div>
+              <div class="metric">
+                <div class="metric-top">Operational focus</div>
+                <div class="metric-bottom">Designed for fleets, maintenance windows, and constraints.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel" role="img" aria-label="Abstract industrial panel">
+            <div class="panel">
+              <div class="panel-title">AxiomIQ Output</div>
+              <div class="panel-body">
+                <pre><code>{
+  "meta": {
+    "schema_version": "v1",
+    "decision_version": "AXIOMIQ_DECISION_VERSION"
+  },
+  "fleet": { "health": "...", "delta": "..." },
+  "focus": { "engine_id": "DG1", "top_risk": "..." },
+  "notes": [ "Deterministic report; validated in CI." ]
+}</code></pre>
+              </div>
+              <div class="panel-footer">
+                <span class="pill">PDF + JSON</span>
+                <span class="pill">Version-locked</span>
+                <span class="pill">Reproducible</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="product" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>AxiomIQ</h2>
+            <p>
+              Fleet drift and health analysis for reliability-critical power systems. Built to surface
+              early warning signals, prioritize interventions, and document decisions with clean reporting.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card">
+              <h3>Drift detection</h3>
+              <p>
+                Detect meaningful deviations from baseline behavior using explicit thresholds and
+                trend logic—tuned for industrial noise and sensor reality.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Risk scoring</h3>
+              <p>
+                Convert multi-signal telemetry into a prioritized action list, with traceable
+                reasons and ranked drivers.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Contract-grade reporting</h3>
+              <p>
+                Produce PDF for humans and strict JSON for systems. Schema versioning prevents silent
+                downstream breakage.
+              </p>
+            </div>
+          </div>
+
+          <div class="callout">
+            <div>
+              <div class="callout-title">Designed for reliability teams</div>
+              <div class="callout-text">
+                Blackreef optimizes for durable decisions: auditability, determinism, and early signal—without
+                pretending operations are clean or ideal.
+              </div>
+            </div>
+            <a class="btn primary" href="#contact">Talk to us</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="principles" class="section muted">
+        <div class="container">
+          <div class="section-head">
+            <h2>Engineering principles</h2>
+            <p>How we build: calm, rigorous, and hostile to silent failure.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <h3>Deterministic by default</h3>
+              <p>
+                Same inputs produce the same outputs. Changes are intentional, versioned, and testable.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Contracts over vibes</h3>
+              <p>
+                Reports are schema-validated artifacts. Integration failures surface fast—in CI, not in the field.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Signal over noise</h3>
+              <p>
+                We bias toward actionable early indicators, not dashboards that look impressive and say nothing.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Operations-first</h3>
+              <p>
+                Recommendations must survive real constraints: crews, parts, windows, and risk tolerance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Contact</h2>
+            <p>
+              If you operate reliability-critical assets and want early drift detection with defensible reporting,
+              reach out.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-row">
+              <div class="label">Email</div>
+              <div class="value"><a href="mailto:origin@blackreef.io">origin@blackreef.io</a></div>
+            </div>
+            <div class="contact-row">
+              <div class="label">Domain</div>
+              <div class="value">blackreef.io</div>
+            </div>
+
+            <div class="fineprint">
+              Blackreef builds industrial intelligence systems focused on reliability, early signal detection, and
+              engineered robustness.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <span class="brand-name">BLACKREEF</span>
+          <span class="dot">•</span>
+          <span class="muted-text">Industrial Intelligence for Reliability</span>
+        </div>
+        <div class="footer-right muted-text">© <span id="year"></span> Blackreef</div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
