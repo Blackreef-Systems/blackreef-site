@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Technical Notes — Blackreef</title>
+    <meta
+      name="description"
+      content="Blackreef technical notes: schema contracts, deterministic analytics, drift detection, and reliability engineering."
+    />
+    <meta name="theme-color" content="#0b0f14" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Blackreef home">
+          <span class="mark" aria-hidden="true">⬣</span>
+          <span class="brand-name">BLACKREEF</span>
+        </a>
+
+        <nav class="nav">
+          <a href="/#product">AxiomIQ</a>
+          <a href="/#principles">Principles</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Technical notes</h2>
+            <p>
+              Short, concrete write-ups on reliability engineering, drift detection,
+              schema contracts, and deterministic analytics. No filler.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <h3>Schema version locking</h3>
+              <p>
+                Why we version JSON schemas, validate artifacts in CI, and treat contract drift as a failure mode.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Deterministic outputs</h3>
+              <p>
+                Why reproducibility matters for operational decisions—and how we enforce it with fixtures and invariants.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;">
+            <a class="btn ghost" href="/">Back to home</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <span class="brand-name">BLACKREEF</span>
+          <span class="dot">•</span>
+          <span class="muted-text">Industrial Intelligence for Reliability</span>
+        </div>
+        <div class="footer-right muted-text">© <span id="year"></span> Blackreef</div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

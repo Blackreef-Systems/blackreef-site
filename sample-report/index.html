@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sample Report — Blackreef AxiomIQ</title>
+    <meta
+      name="description"
+      content="Representative AxiomIQ report output: deterministic PDF + strict JSON contract validation."
+    />
+    <meta name="theme-color" content="#0b0f14" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Blackreef home">
+          <span class="mark" aria-hidden="true">⬣</span>
+          <span class="brand-name">BLACKREEF</span>
+        </a>
+
+        <nav class="nav">
+          <a href="/#product">AxiomIQ</a>
+          <a href="/#principles">Principles</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Sample report</h2>
+            <p>
+              This page is the public entry point for a representative AxiomIQ output artifact.
+              We keep the public sample intentionally limited; full reports include fleet context,
+              parameter traceability, and decision drivers.
+            </p>
+          </div>
+
+          <div class="callout">
+            <div>
+              <div class="callout-title">Request the PDF + JSON bundle</div>
+              <div class="callout-text">
+                We’ll share a representative report and walk through the deterministic logic,
+                schema contract, and decision trace.
+              </div>
+            </div>
+            <a
+              class="btn primary"
+              href="mailto:origin@blackreef.io?subject=Blackreef%20AxiomIQ%20%E2%80%94%20Request%20sample%20report%20bundle&body=Hi%20Blackreef%2C%0A%0AI%27d%20like%20to%20request%20a%20representative%20AxiomIQ%20sample%20report%20(PDF%20%2B%20JSON).%0A%0AContext%20(optional)%3A%20%0A-%20Asset%20type%3A%20%0A-%20Fleet%20size%3A%20%0A-%20Primary%20pain%20point%3A%20%0A%0AThanks%2C"
+            >
+              Email request
+            </a>
+          </div>
+
+          <div class="contact-card" style="margin-top:14px;">
+            <div class="contact-row">
+              <div class="label">What you’ll receive</div>
+              <div class="value">One representative PDF + a strict JSON artifact</div>
+            </div>
+            <div class="contact-row">
+              <div class="label">Contract</div>
+              <div class="value">Version-locked JSON schema validation (v1)</div>
+            </div>
+            <div class="contact-row">
+              <div class="label">Notes</div>
+              <div class="value">No marketing dashboards. Only evidence and traceability.</div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;">
+            <a class="btn ghost" href="/">Back to home</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <span class="brand-name">BLACKREEF</span>
+          <span class="dot">•</span>
+          <span class="muted-text">Industrial Intelligence for Reliability</span>
+        </div>
+        <div class="footer-right muted-text">© <span id="year"></span> Blackreef</div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
