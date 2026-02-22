@@ -32,6 +32,22 @@ body {
     linear-gradient(180deg, var(--bg), var(--bg2));
 }
 
+/* motion + polish */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease,
+    color 160ms ease;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(215, 222, 232, 0.35);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
 a { color: var(--accent2); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
@@ -93,10 +109,15 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   padding: 10px 8px;
   border-radius: 10px;
 }
+
 .nav a:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.05);
   text-decoration: none;
   color: var(--text);
+}
+
+.nav a:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .hero {
@@ -175,7 +196,15 @@ h1 {
   color: var(--muted);
 }
 
-.btn:hover { text-decoration: none; border-color: rgba(255, 255, 255, 0.22); }
+.btn:hover {
+  text-decoration: none;
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0px);
+}
 
 .hero-metrics {
   margin-top: 18px;
@@ -262,6 +291,7 @@ code { font-family: var(--mono); font-size: 12px; color: rgba(255, 255, 255, 0.8
   border-bottom: 1px solid var(--line);
   padding: 18px 0;
   background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(8px);
 }
 
 .authority-inner {
@@ -318,6 +348,13 @@ code { font-family: var(--mono); font-size: 12px; color: rgba(255, 255, 255, 0.8
   border-radius: var(--radius);
   padding: 16px;
   background: var(--card);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
 }
 
 .card h3 {
