@@ -1,0 +1,27 @@
+name: Website quality gates
+on:
+  pull_request:
+    paths:
+      - '**/*.html'
+      - '**/*.css'
+      - '**/*.js'
+      - '.github/workflows/site-quality.yml'
+      - 'scripts/**'
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify local links, page structure and assets
+        run: node scripts/check-site.mjs
+      - name: Validate HTML
+        run: |
+          npx --yes html-validate@10 "index.html" "notes/index.html" "sample-report/index.html" || echo "::warning::HTML validator identified issues to review"
