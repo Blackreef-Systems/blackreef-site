@@ -5,8 +5,10 @@ on:
       - '**/*.html'
       - '**/*.css'
       - '**/*.js'
+      - '**/*.mjs'
       - '.github/workflows/site-quality.yml'
       - 'scripts/**'
+      - 'tests/**'
   push:
     branches: [main]
   workflow_dispatch:
@@ -22,6 +24,16 @@ jobs:
           node-version: '22'
       - name: Verify local links, page structure and assets
         run: node scripts/check-site.mjs
-      - name: Validate HTML
+      - name: Install browser test tooling
         run: |
-          npx --yes html-validate@10 "index.html" "notes/index.html" "sample-report/index.html" || echo "::warning::HTML validator identified issues to review"
+          npm install --no-save @playwright/test@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Test desktop, mobile and ultrawide layouts
+        run: npx playwright test
+      - name: Upload browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: blackreef-browser-screenshots
+          path: screenshots/
+          if-no-files-found: ignore
