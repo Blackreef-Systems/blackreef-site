@@ -5,13 +5,13 @@ let errors = 0;
 for (const file of pages) {
   const html = fs.readFileSync(file,'utf8');
   const fail = message => { console.error(`ERROR [${file}] ${message}`); errors++; };
-  if (!/<html\\s+lang="en"/i.test(html)) fail('missing document language');
-  if (!/<meta\\s+name="viewport"/i.test(html)) fail('missing responsive viewport');
-  if (!/<title>[^<]+<\\/title>/i.test(html)) fail('missing page title');
-  if (!/<main\\b/i.test(html)) fail('missing main landmark');
-  if (!/<nav\\b/i.test(html)) fail('missing navigation landmark');
-  if (!/<h1\\b/i.test(html)) fail('missing h1');
-  if (!/<meta\\s+name="description"/i.test(html)) fail('missing meta description');
+  if (!/<html\s+lang="en"/i.test(html)) fail('missing document language');
+  if (!/<meta\s+name="viewport"/i.test(html)) fail('missing responsive viewport');
+  if (!/<title>[^<]+<\/title>/i.test(html)) fail('missing page title');
+  if (!/<main\b/i.test(html)) fail('missing main landmark');
+  if (!/<nav\b/i.test(html)) fail('missing navigation landmark');
+  if (!/<h1\b/i.test(html)) fail('missing h1');
+  if (!/<meta\s+name="description"/i.test(html)) fail('missing meta description');
   const links = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map(x=>x[1]);
   for (const url of links) {
     if (/^(https?:|mailto:|tel:|data:|#)/.test(url)) continue;
